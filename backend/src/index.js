@@ -60,7 +60,7 @@ app.post('/login', async (req, res) => {
         return res.status(401).json({ success: false, message: 'Invalid credentials' });
       }
     } else {
-      // User does not exist - Register flow?
+      // User does not exist - Register flow
       if (!publickey) {
         // Client needs to generate keys and retry
         return res.status(404).json({ success: false, message: 'User not found, registration required' });
